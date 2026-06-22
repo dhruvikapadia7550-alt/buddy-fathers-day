@@ -772,3 +772,69 @@ body{
     z-index: 2;
 
 }
+/* ===========================
+   Mobile Responsive
+=========================== */
+
+@media (max-width: 768px) {
+
+    h1{
+        font-size: 2.7rem !important;
+        line-height: 1.2;
+    }
+
+    .subtitle{
+        font-size: 1.2rem !important;
+        line-height: 1.6;
+    }
+
+    .story-card{
+        width: 100%;
+        padding: 25px;
+    }
+
+    .story-card p{
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .meaning-cards{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .meaning-card{
+        width: 92%;
+        max-width: 360px;
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .meaning-card h3{
+        font-size: 2rem;
+    }
+
+    .meaning-card p{
+        font-size: 1.05rem;
+    }
+
+    .next-btn{
+        width: 90%;
+        max-width: 320px;
+        font-size: 1.1rem;
+    }
+
+    .final-section h1{
+        font-size: 2.5rem !important;
+    }
+
+    .final-section p{
+        font-size: 1.2rem;
+    }
+
+    .signature{
+        font-size: 2.2rem;
+    }
+
+}
