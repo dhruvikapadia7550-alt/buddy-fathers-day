@@ -1,0 +1,774 @@
+/* ==========================
+   GOOGLE SCRAPBOOK THEME
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#F8F3EC;
+
+    color:#3E2723;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================
+        LOADER
+========================== */
+
+#loader{
+
+    position:fixed;
+
+    width:100%;
+    height:100vh;
+
+    background:#F8F3EC;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    transition:1.5s;
+
+}
+
+.heart{
+
+    font-size:95px;
+
+    margin-bottom:20px;
+
+    animation:pulse 1.8s infinite;
+
+    filter: drop-shadow(0 8px 18px rgba(255,105,135,.25));
+
+}
+
+#loader h1{
+
+    margin-top:20px;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:55px;
+
+    color:#5A3E2B;
+
+}
+
+#loading-text{
+
+    margin-top:20px;
+
+    color:#8B5E3C;
+
+    font-size:22px;
+
+    transition:opacity .5s ease;
+
+}
+
+/* ==========================
+        HERO
+========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding: 20px ;
+
+}
+
+/* ==========================
+      LEFT CONTENT
+========================== */
+
+.hero-text{
+
+    flex:1;
+
+    min-width:320px;
+
+}
+
+.small-title{
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    letter-spacing:4px;
+
+    color:#8B5E3C;
+
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+
+}
+
+.hero-text h1{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:64px;
+
+    font-weight:700;
+
+    line-height:1.05;
+
+    color:#4E342E;
+
+    margin:10px 0 15px;
+
+}
+.subtitle{
+
+    font-size:22px;
+
+    line-height:1.6;
+
+    color:#6F4E37;
+
+    max-width:750px;
+
+    margin:0 auto 25px;
+
+    margin-bottom:50px;
+
+}
+
+/* ==========================
+        BUTTON
+========================== */
+
+#beginBtn{
+
+    background:#8B5E3C;
+
+    color:white;
+
+    border:none;
+    margin-top: 10px;
+
+    border-radius:50px;
+
+    padding:16px 40px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 12px 30px rgba(139,94,60,.25);
+
+}
+
+#beginBtn:hover{
+
+    background:#6F4E37;
+
+    transform:translateY(-5px) scale(1.03);
+
+}
+#beginBtn:hover{
+
+    background:#6F4E37;
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================
+      PHOTO CARD
+========================== */
+
+.photo-card{
+
+    display:none;
+
+}
+
+.photo-card:hover{
+
+    transform:rotate(0deg) scale(1.03);
+
+}
+
+.photo-card img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:8px;
+
+}
+
+.photo-card p{
+
+    margin-top:15px;
+
+    text-align:center;
+
+    font-family:'Caveat',cursive;
+
+    font-size:30px;
+
+    color:#6F4E37;
+
+}
+
+/* ==========================
+       ANIMATIONS
+========================== */
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ==========================
+      RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.hero-text h1{
+
+    font-size:60px;
+
+}
+
+.subtitle{
+
+    font-size:22px;
+
+}
+
+.small-title{
+
+    font-size:15px;
+
+    letter-spacing:3px;
+
+}
+
+}
+
+#floating-hearts{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:5;
+
+}
+
+.floating-heart{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    animation:floatHeart linear forwards;
+
+}
+
+@keyframes floatHeart{
+
+    from{
+
+        transform:
+        translateY(0)
+        translateX(0)
+        rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translateY(-120vh)
+        translateX(40px)
+        rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+/*==============================
+      STORY SECTION
+===============================*/
+.story-section{
+
+    min-height:100vh;
+
+    padding:30px 8% 15px;
+
+    background:#FFF9F3;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+.story-section h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:52px;
+
+    color:#4E342E;
+
+    margin-bottom:8px;
+
+}
+
+.story-quote{
+
+    font-size:18px;
+
+    color:#8B5E3C;
+
+    font-style:italic;
+
+    margin-bottom:35px;
+    max-width:900px ;
+    line-height: 1.5;
+
+}
+
+
+.story-card{
+
+    max-width:900px;
+    width:100%;
+
+    margin:15px auto 8px;
+
+    padding:28px 42px;
+
+    background:#FFFDF8;
+
+    border:2px solid #E8D9C8;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 28px rgba(111,78,55,.08);
+
+}
+
+
+.story-card p{
+
+    font-size:18px;
+
+    line-height:1.6;
+
+    color:#5A4638;
+
+    text-align:left;
+
+}
+
+/* ==========================
+      Next Page Button
+========================== */
+
+.next-page-btn{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-top:20px;
+
+}
+
+.next-page-btn button{
+
+    background:#8B5E3C;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 28px;
+
+    border-radius:40px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(111,78,55,.15);
+
+}
+
+.next-page-btn button:hover{
+
+    background:#6F4E37;
+
+    transform:translateY(-2px);
+
+}
+.story-btn{
+
+    margin-top:40px;
+
+    background:#8B5E3C;
+
+    color:white;
+
+    border:none;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.story-btn:hover{
+
+    background:#6F4E37;
+
+    transform:translateY(-4px);
+
+}
+.meaning-section{
+
+    min-height:100vh;
+
+    padding:25px 5%;
+
+    background:#FFF9F3;
+
+    text-align:center;
+
+}
+.meaning-section h2{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:52px;
+
+    margin-bottom:10px;
+
+}
+
+.cards{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:stretch;
+
+    gap:18px;
+
+    flex-wrap:nowrap;
+
+    margin-top:30px;
+
+}
+
+.card{
+
+    width:280px;
+
+    min-height:320px;
+
+    background:#FFFDF8;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    border:2px solid #E8D9C8;
+
+    box-shadow:0 10px 25px rgba(111,78,55,.08);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.icon{
+
+    font-size:38px;
+
+    margin-bottom:12px;
+
+}
+
+.card h3{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:18px;
+
+    line-height:1.2;
+
+    margin-bottom:12px;
+
+    color:#6F4E37;
+
+}
+
+.card p{
+
+    color:#5A4638;
+
+    line-height:1.5;
+
+    font-size:15px;
+
+}
+/* ==========================
+        FINAL PAGE
+========================== */
+
+.final-section{
+
+    min-height:100vh;
+
+    background:#F8F3EC;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px 20px;
+
+}
+
+.final-section h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:48px;
+
+    color:#4E342E;
+
+    margin-bottom:15px;
+
+}
+
+.final-text{
+
+    font-size:18px;
+
+    color:#6F4E37;
+
+    line-height:1.45;
+
+    max-width:700px;
+
+    margin-bottom:25px;
+
+}
+
+
+.signature{
+
+    margin-top:20px;
+
+    font-family:'Caveat', cursive;
+
+    font-size:42px;
+
+    color:#8B5E3C;
+
+    line-height:1.2;
+
+}
+
+.ending-line{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+    color:#6F4E37;
+
+    font-style:italic;
+
+}
+/* ==========================
+      Floating Hearts
+========================== */
+
+
+/* ==========================
+      Floating Hearts
+========================== */
+
+#hearts-container{
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+}
+
+.floating-heart{
+
+    position: absolute;
+
+    bottom: -40px;
+
+    color: #D89AA0;
+
+    font-size: 18px;
+
+    opacity: 0.25;
+
+    user-select: none;
+
+    pointer-events: none;
+
+    animation: floatUp linear forwards;
+
+}
+
+@keyframes floatUp{
+
+    0%{
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15%{
+        opacity: .25;
+    }
+
+    50%{
+        transform: translateY(-50vh) translateX(15px) rotate(10deg);
+    }
+
+    100%{
+        transform: translateY(-120vh) translateX(-15px) rotate(-10deg);
+        opacity: 0;
+    }
+
+}
+
+.hero,
+.story-section,
+.meaning-section,
+.final-section,
+#loader{
+
+    position:relative;
+    z-index: 2;
+
+}
