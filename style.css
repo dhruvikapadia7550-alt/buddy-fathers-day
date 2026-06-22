@@ -552,7 +552,7 @@ body{
 
     gap:18px;
 
-    flex-wrap:nowrap;
+    flex-wrap:wrap;
 
     margin-top:30px;
 
@@ -776,65 +776,95 @@ body{
    Mobile Responsive
 =========================== */
 
-@media (max-width: 768px) {
+/* ===========================
+   Mobile Responsive
+=========================== */
 
-    h1{
-        font-size: 2.7rem !important;
-        line-height: 1.2;
+@media (max-width:768px){
+
+    .hero{
+        padding:20px;
+    }
+
+    .hero-text h1{
+        font-size:48px;
+        line-height:1.1;
     }
 
     .subtitle{
-        font-size: 1.2rem !important;
-        line-height: 1.6;
+        font-size:18px;
+        line-height:1.5;
+    }
+
+    .small-title{
+        font-size:13px;
+        letter-spacing:2px;
+    }
+
+    .story-section h2{
+        font-size:42px;
+    }
+
+    .story-quote{
+        font-size:18px;
+        padding:0 10px;
     }
 
     .story-card{
-        width: 100%;
-        padding: 25px;
+        padding:20px;
     }
 
     .story-card p{
-        font-size: 1.1rem;
-        line-height: 1.8;
+        font-size:16px;
+        line-height:1.7;
+        text-align:center;
     }
 
-    .meaning-cards{
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+    .story-btn{
+        width:90%;
+        max-width:320px;
+        font-size:18px;
+        padding:15px;
     }
 
-    .meaning-card{
-        width: 92%;
-        max-width: 360px;
-        min-height: auto;
-        padding: 25px;
+    .cards{
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
     }
 
-    .meaning-card h3{
-        font-size: 2rem;
+    .card{
+        width:95%;
+        max-width:340px;
+        min-height:auto;
     }
 
-    .meaning-card p{
-        font-size: 1.05rem;
+    .meaning-section h2{
+        font-size:42px;
     }
 
-    .next-btn{
-        width: 90%;
-        max-width: 320px;
-        font-size: 1.1rem;
+    .card h3{
+        font-size:32px;
     }
 
-    .final-section h1{
-        font-size: 2.5rem !important;
+    .card p{
+        font-size:17px;
     }
 
-    .final-section p{
-        font-size: 1.2rem;
+    .final-section h2{
+        font-size:42px;
+    }
+
+    .final-text{
+        font-size:17px;
+    }
+
+    .ending-line{
+        font-size:18px;
     }
 
     .signature{
-        font-size: 2.2rem;
+        font-size:38px;
     }
 
 }
